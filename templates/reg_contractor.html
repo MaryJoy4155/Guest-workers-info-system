@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1" xmlns="http://www.w3.org/1999/html">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Register</h3>
+                        <p> <a href="index.html">Home</a> / About</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+    <table align="center" width="500px" >
+    <tr>
+        <br>
+    <td><label>First Name</label></td>
+    <td><input class="form-control valid" name="fname"  type="text"
+               onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Enter First Name'" required placeholder="Enter First name"> </td>
+    </tr>
+    <tr>
+        <td><label>Last Name</label></td>
+        <td><input class="form-control valid" name="lname"  type="text"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter Last Name'" placeholder="Enter Last name"></td>
+    </tr>
+    <tr>
+    <td><label>Gender</label></td>
+    <td><label><input class="form-control valid" name="gender" value="Male" type="radio"
+               onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Male'" placeholder="Male">  Male </label>
+         <label><input required class="form-control valid" name="gender" value="Female" type="radio"
+               onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Female'" placeholder="Female">Female</label></td>
+    </tr>
+    <tr>
+        <td><label>Date Of Birth</label></td>
+        <td><input class="form-control valid" name="DOB"  type="date"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter DOB'" placeholder="Enter DOB"></td>
+    </tr>
+     <tr>
+        <td><label>Permanant Address</label></td>
+        <td><input class="form-control valid" name="paddress"  type="text"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter permanant Address'" placeholder="Enter Permanant Address"></td>
+    </tr>
+    <tr>
+        <td><label>Temporary Address</label></td>
+        <td><input class="form-control valid" name="taddress"  type="text"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter Temporary Address'" placeholder="Enter Temporary Address"></td>
+    </tr>
+    <tr>
+    <td> <label>Phone number</label></td>
+    <td><input class="form-control valid" name="contact"  type="number"
+                   onfocus="this.placeholder = ''"
+                   onblur="this.placeholder = 'Enter Phone number'" placeholder="Enter phone number"></td>
+    </tr>
+    <tr>
+    <td><label>E-mail</label></td>
+    <td><input class="form-control valid" name="email"  type="email"
+               onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Enter email'" placeholder="Enter email id"></td>
+    </tr>
+    <tr>
+        <td><label>District</label></td>
+        <td><input class="form-control valid" name="district"  type="text"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter District'" placeholder="Enter District"></td>
+    </tr>
+    <tr>
+        <td><label>State</label></td>
+        <td><select name="state" required><option>Kerala  </option>
+            <option>Kerala  </option>
+            <option>Thamizhnadu  </option>
+            <option>Karnataka  </option>
+            <option>Adhrapradhesh  </option>
+        </select></td>
+    </tr>
+    <tr>
+        <td><label>Adhar Number</label></td>
+        <td><input class="form-control valid" name="adhar"  type="number" pattern="[0-9]{12}"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter adhar number'" placeholder="Enter adhar number"></td>
+    </tr>
+    <tr>
+        <td><label>Upload Your ID proof</label></td>
+        <td><input class="form-control valid" name="proof"  type="file"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter ID proof'" placeholder="Enter ID proof"></td>
+    </tr>
+    <tr>
+        <td><label>Upload Your Photo</label></td>
+        <td><input class="form-control valid" name="photo"  type="file"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter photo'" placeholder="Enter photo"></td>
+    </tr>
+    <tr>
+        <td><label>Password</label></td>
+        <td><input class="form-control valid" name="password"  type="password"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter password'" placeholder="Enter password"></td>
+    </tr>
+     <tr>
+        <td><label> Confirm Password</label></td>
+        <td><input class="form-control valid" name="cpassword"  type="password"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter password'" placeholder="Re-Enter password"></td>
+    </tr>
+        <tr></tr>
+     <tr align="center">
+          <td><button type="submit"  class="btn btn-primary login-btn mb-4">Submit</button></td>
+          <td><a href="" type="submit"  class="btn btn-primary login-btn mb-4">Cancel</a></td>
+     </tr>
+    </table>
+    </form>
+    <!-- about_area_end  -->
+{% endblock %}

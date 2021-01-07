@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if message %}
+<script>
+    alert("{{ message }}")
+
+</script>
+    {% endif %}
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div >
+            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
+                <div class="container">
+
+                    <div>
+
+                        <div style="padding-top: 5px">
+                            <div class="slider_text" >
+
+                                <h3><i>Effective Governance</i></h3>
+                                <h3> <i> Bettter Citizen Services </i> </h3>
+                                <a href="SignUp" class="boxed-btn3">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+{% endblock %}
